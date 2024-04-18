@@ -43,7 +43,7 @@ const ChatComponent = () => {
   }, [message]);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-300 px-[40%]">
+    <div className="h-screen flex flex-col justify-center items-center bg-gray-300 px-[40%] py-[10%]">
       <div className="flex bg-blue-300 w-full py-2">
         <Link href="/" className="flex flex-col justify-center ml-3">
           <Image src={Arrow} width={30} alt="Picture of the author" />

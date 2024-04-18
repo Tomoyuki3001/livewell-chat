@@ -29,12 +29,7 @@ export default function Home() {
         }}
       >
         <div className="flex bg-blue-400 hover:bg-blue-600 py-3 px-6 rounded mb-10">
-          <Image
-            src={Doctor}
-            width={50}
-            height={50}
-            alt="Picture of the author"
-          />
+          <Image src={Doctor} width={40} alt="Picture of the author" />
           <div className="flex flex-col justify-center ml-5">
             <p>{doctor.name}</p>
           </div>
@@ -49,12 +44,7 @@ export default function Home() {
         }}
       >
         <div className="flex bg-green-400 hover:bg-green-600 py-3 px-6 rounded">
-          <Image
-            src={Profile}
-            width={50}
-            height={50}
-            alt="Picture of the author"
-          />
+          <Image src={Profile} width={40} alt="Picture of the author" />
           <div className="flex flex-col justify-center ml-5">
             <p>{patient.name}</p>
           </div>
