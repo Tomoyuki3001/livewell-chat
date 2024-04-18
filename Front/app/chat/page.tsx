@@ -19,12 +19,12 @@ export default function Home() {
     { id: "2", message: "Good!" },
   ]);
 
-  const createNewMessage = (e: any) => {
+  const createNewMessage = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const newMessage = {
       id: id,
       message: input,
     };
-    e.preventDefault();
     setMessage([...message, newMessage]);
     setInput("");
   };
