@@ -104,7 +104,7 @@ const ChatComponent = () => {
       <form className="w-full flex" onSubmit={createNewMessage}>
         <input
           type="text"
-          className="border w-4/5 p-3"
+          className="border text-sm w-4/5 p-3"
           placeholder="Text here..."
           value={input}
           onChange={(e) => {
@@ -113,10 +113,9 @@ const ChatComponent = () => {
         />
         <button
           type="submit"
-          className="w-1/5 p-3 bg-[#ffa74f] hover:bg-[#ffcd9c] flex flex-col items-center"
+          className="w-1/5 p-3 bg-[#ffa74f] hover:bg-[#ffcd9c] flex flex-col justify-center items-center"
         >
           <Image
-            className=""
             src={Send}
             width={20}
             height={20}
