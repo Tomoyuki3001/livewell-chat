@@ -8,12 +8,17 @@ import { useState, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Arrow from "../../public/arrow.png";
 
+interface Message {
+  id: string;
+  message: string;
+}
+
 export default function Home() {
   const searchParams = useSearchParams();
-  const [input, setInput] = useState("");
-  const [id, setId] = useState(searchParams.get("id"));
-  const chatContainerRef = useRef(null);
-  const [message, setMessage] = useState([
+  const [input, setInput] = useState<string>("");
+  const [id, setId] = useState<string>(searchParams.get("id") || "null");
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const [message, setMessage] = useState<Message[]>([
     { id: "2", message: "Hello Doctor!" },
     { id: "1", message: "Hello! How are you?" },
     { id: "2", message: "Good!" },
@@ -30,7 +35,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
+    }
   }, [message]);
 
   return (
