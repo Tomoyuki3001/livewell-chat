@@ -55,7 +55,7 @@ const ChatComponent = () => {
           <Link href="/" className="flex flex-col justify-center ml-3">
             <div className="flex">
               <Image src={Arrow} width={20} alt="Picture of the author" />
-              <p className="ml-1">Back</p>
+              <p className="ml-1 text-sm">Back</p>
             </div>
           </Link>
         </div>
@@ -63,11 +63,12 @@ const ChatComponent = () => {
           <div className="flex">
             <Image
               src={id === "1" ? Profile : Doctor}
-              width={30}
+              width={25}
+              height={25}
               alt="Picture of the author"
             />
             <div className="flex flex-col justify-center ml-3">
-              <p className="text-lg">{id === "1" ? "Patient" : "Doctor"}</p>
+              <p className="text-sm">{id === "1" ? "Patient" : "Doctor"}</p>
             </div>
           </div>
         </div>
@@ -75,6 +76,7 @@ const ChatComponent = () => {
           className="ml-5"
           src={Phone}
           width={25}
+          height={25}
           alt="Picture of the author"
         />
       </div>
@@ -89,7 +91,7 @@ const ChatComponent = () => {
               className={`p-3 ${id === chat.id ? "text-end" : "text-start"}`}
             >
               <p
-                className={`max-w-[60%] text-sm ${
+                className={`max-w-[60%] text-xs ${
                   id === chat.id ? "message-sender" : "message"
                 }`}
               >
@@ -103,7 +105,7 @@ const ChatComponent = () => {
         <input
           type="text"
           className="border w-4/5 p-3"
-          placeholder="Text here"
+          placeholder="Text here..."
           value={input}
           onChange={(e) => {
             setInput(e.target.value);
@@ -116,7 +118,8 @@ const ChatComponent = () => {
           <Image
             className=""
             src={Send}
-            width={25}
+            width={20}
+            height={20}
             alt="Picture of the author"
           />
         </button>
