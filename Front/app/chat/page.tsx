@@ -49,7 +49,7 @@ const ChatComponent = () => {
   }, [message]);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-slate-100 px-[40%] py-[5%]">
+    <div className="h-screen flex flex-col justify-center items-center bg-slate-100 sm:p-0 lg:px-[40%] lg:py-[5%]">
       <div className="flex bg-slate-200 w-full py-2">
         <div className="flex w-1/5">
           <Link href="/" className="flex flex-col justify-center ml-3">
@@ -89,7 +89,7 @@ const ChatComponent = () => {
               className={`p-3 ${id === chat.id ? "text-end" : "text-start"}`}
             >
               <p
-                className={`max-w-[50%] ${
+                className={`max-w-[60%] text-sm ${
                   id === chat.id ? "message-sender" : "message"
                 }`}
               >
