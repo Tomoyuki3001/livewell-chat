@@ -18,7 +18,7 @@ export default function Home() {
     name: "Doctor",
   };
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-300">
+    <div className="h-screen flex flex-col justify-center items-center bg-white">
       <h2 className="text-xl mb-10">Chat with...</h2>
       <Link
         href={{
@@ -28,7 +28,7 @@ export default function Home() {
           },
         }}
       >
-        <div className="flex bg-blue-400 hover:bg-blue-600 py-3 px-6 rounded mb-10">
+        <div className="flex shadow-xl bg-blue-400 hover:bg-blue-600 py-3 px-6 rounded mb-10">
           <Image src={Doctor} width={40} alt="Picture of the author" />
           <div className="flex flex-col justify-center ml-5">
             <p>{doctor.name}</p>
@@ -43,7 +43,7 @@ export default function Home() {
           },
         }}
       >
-        <div className="flex bg-green-400 hover:bg-green-600 py-3 px-6 rounded">
+        <div className="flex shadow-xl bg-green-400 hover:bg-green-600 py-3 px-6 rounded">
           <Image src={Profile} width={40} alt="Picture of the author" />
           <div className="flex flex-col justify-center ml-5">
             <p>{patient.name}</p>
