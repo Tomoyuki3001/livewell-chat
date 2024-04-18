@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Profile from "../../public/profile.png";
 import Doctor from "../../public/doctor.png";
