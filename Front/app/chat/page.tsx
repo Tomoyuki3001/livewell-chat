@@ -19,7 +19,7 @@ export default function Home() {
     { id: "2", message: "Good!" },
   ]);
 
-  const createNewMessage = (e) => {
+  const createNewMessage = (e: any) => {
     const newMessage = {
       id: id,
       message: input,
